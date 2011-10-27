@@ -1,0 +1,7 @@
+Esta carpeta debe contener los siguientes documentos:
+
+1) Casos del uso publicar producto de mercado libre
+(casosdeuso-mercadolibre.odt)
+
+2) Un caso de uso a su elección de su proyecto personal
+(casosdeuso-proyectopersonal.odt)

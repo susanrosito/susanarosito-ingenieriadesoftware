@@ -1,0 +1,6 @@
+En esta carpeta debe deben estar los siguientes dos documentos correspondientes a la tarea de la Clase #05 (2011-09-01).
+
+1) Modelo de dominio de proyecto personal (modelodedominio-proyectopersonal.odt)
+
+2) Modelo de dominio de mercado libre
+(modelodedominio-mercadolibre.odt)

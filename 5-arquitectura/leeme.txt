@@ -1,0 +1,6 @@
+Esta carpeta debe contener los items dos documentos:
+
+1) Resumen de uno de los articulos de arquitectura a elección correspondiente a la tarea de la case Clase #11 (2011-09-26)
+(articulodearquitectura.odt)
+
+2) carpeta codigo, con el codigo (archivos.java) del la implementación de ejemplo de dos test (uno de lectura y otro de escritura) mostrando la arquitectura MVC. Tambien debe estar el archivo build.xml para compilar y correr las pruebas.
