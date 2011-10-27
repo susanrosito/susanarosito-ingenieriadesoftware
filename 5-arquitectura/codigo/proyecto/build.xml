@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project name="Proyecto" default="install">
+
+    <property name="basedir" location="."/>
+    <property name="src" location="${basedir}/src/main/java"/>
+    <property name="bin" location="${basedir}/bin"/>
+    <property name="doc" location="${basedir}/doc"/>
+    <property name="jar" location="${basedir}/jar"/>
+    <property name="test" location="${basedir}/src/test/java"/>
+    <property name="lib" location="${basedir}/lib"/>
+    <property name="junit-version" location="-3.8.1"/>
+
+
+    <path id="classpath.base"/>
+
+    <path id="classpath.test">
+    	<pathelement location="${lib}/junit${junit-version}.jar" />
+	<pathelement location="${test}" />
+	<path refid="classpath.base" />
+    </path>
+
+    <target name="install" depends="clean, package, document"/>
+
+   <target name="package" depends="compile">
+      <jar destfile="${jar}/Proyecto.jar" basedir="${bin}"/>
+   </target>
+
+   <target name="compile">
+        <delete dir="${bin}"/>
+	<mkdir dir="${bin}"/>
+      <javac srcdir="${src}" destdir="${bin}"/>
+   </target>
+
+   <target name="document" description="generar la documentacion con javadocs">
+	<delete dir="${doc}"/>
+	<mkdir dir="${doc}"/>
+      <javadoc sourcepath="${src}" destdir="${doc}" packagenames="*" >
+	</javadoc>
+   </target>
+
+    <target name="clean" description="clean up" >
+        <delete dir="${bin}"/>
+	<delete dir="${doc}"/>
+    </target>
+
+
+    <target name="compile-test">
+    	<javac srcdir="${test}" destdir="${bin}" />
+    </target>
+
+  <target name="test" depends="compile-test">
+    <junit>
+      <classpath refid="classpath.test" />
+      <formatter type="brief" usefile="false" />
+      <batchtest>
+        <fileset dir="${test}" includes="**/*Test.class" />
+      </batchtest>
+    </junit>
+    <fail message="test failed" if="test.failure" />
+  </target>
+
+</project>
