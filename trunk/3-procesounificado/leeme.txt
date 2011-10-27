@@ -1,0 +1,5 @@
+En esta carpeta debe contener los siguientes dos documentos:
+
+1) Roles del proceso unificado, correspondientes a la tarea de la clase Clase #7 (2011-09-12): (rolesprocesounificado.odt)
+
+2) Resumen del proceso unificado (resumenprocesounificado.odt)
