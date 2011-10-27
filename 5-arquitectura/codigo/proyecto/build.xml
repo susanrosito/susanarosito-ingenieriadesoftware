@@ -10,15 +10,6 @@
     <property name="lib" location="${basedir}/lib"/>
     <property name="junit-version" location="-3.8.1"/>
 
-
-    <path id="classpath.base"/>
-
-    <path id="classpath.test">
-    	<pathelement location="${lib}/junit${junit-version}.jar" />
-	<pathelement location="${test}" />
-	<path refid="classpath.base" />
-    </path>
-
     <target name="install" depends="clean, package, document"/>
 
    <target name="package" depends="compile">
@@ -43,6 +34,16 @@
 	<delete dir="${doc}"/>
     </target>
 
+
+<!-- TEST !-->
+
+    <path id="classpath.base"/>
+
+    <path id="classpath.test">
+    	<pathelement location="${lib}/junit${junit-version}.jar" />
+	<pathelement location="${test}" />
+	<path refid="classpath.base" />
+    </path>
 
     <target name="compile-test">
     	<javac srcdir="${test}" destdir="${bin}" />
